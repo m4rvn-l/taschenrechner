@@ -34,5 +34,9 @@ function run(scriptPath, args) {
 const tscJs = resolveTool('typescript', ['lib', 'tsc.js'])
 const viteJs = resolveTool('vite', ['bin', 'vite.js'])
 
+console.log('[build-client] cwd(client)=', client)
+console.log('[build-client] tsc =', tscJs)
+console.log('[build-client] vite =', viteJs)
+
 run(tscJs, ['-b'])
 run(viteJs, ['build'])
